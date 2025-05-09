@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rate Professors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="login-signup">
+          <a href="#" id="loginSignupBtn">Login/Sign up</a>
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </header>
+
+      <div class="content">
+        <h1>Rate<br />Professors</h1>
+
+        <div class="search-container">
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search by professor"
+              onkeyup="showSuggestions()"
+            />
+            <button onclick="clearSearch()">&times;</button>
+          </div>
+
+          <ul id="suggestions"></ul>
+          <!-- Suggestions will appear here -->
+
+          <button id="toggleSearch" class="university-button">
+            Search by university
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Login</h2>
+        <button class="google-btn">Login with Google</button>
+        <hr />
+        <p>Or login with email</p>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a href="#" class="forgot">Forgot Password?</a>
+        <button class="continue-btn">Continue</button>
+        <p>
+          Don't have an account?
+          <a href="#" onclick="switchToStudent()">Sign Up</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Student Sign Up Modal -->
+    <div id="studentModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2><strong>Student</strong> Sign Up</h2>
+        <p>
+          Are you a professor?
+          <a href="#" onclick="switchToProfessor()">Sign up here</a>
+        </p>
+        <button class="google-btn">Sign up with Google</button>
+        <hr />
+        <p>Or sign up with email</p>
+        <input type="email" placeholder="Email" />
+        <button class="continue-btn">Continue</button>
+        <p>
+          Already have an account?
+          <a href="#" onclick="switchToLogin()">Login</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Professor Sign Up Modal -->
+    <div id="profModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2><strong>Professor</strong> Sign Up</h2>
+        <p><strong>Search for your professor profile</strong></p>
+        <input type="text" placeholder="Search" />
+        <p>Can’t find your profile? <a href="#">Create one here</a></p>
+        <p>
+          Already have an account?
+          <a href="#" onclick="switchToLogin()">Login</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

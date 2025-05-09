@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f1eb;
+}
+
+/* Header */
+.header {
+    background-color: #6b4c2f;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+
+.search-bar-container {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search-bar {
+    width: 250px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.login-signup {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+}
+
+.login-signup a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-signup i {
+    font-size: 20px;
+    color: white;
+}
+
+/* Comparison Section 
+.comparison-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 60px;
+    color: #3e2c1e;
+} */
+
+.comparison-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 100px 80px 60px 80px; /* Increased top padding */
+    position: relative;
+    font-size: 18px;
+}
+
+
+.university {
+    width: 350px;
+}
+
+.university h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.university .location {
+    font-size: 14px;
+    color: #6d5c4a;
+    margin-bottom: 10px;
+}
+
+.overall-score {
+    font-size: 36px;
+    font-weight: bold;
+    color: #3e2c1e;
+}
+
+.label {
+    margin-top: -5px;
+    font-size: 14px;
+    color: #6d5c4a;
+    margin-bottom: 20px;
+}
+
+.categories {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.categories li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.categories i {
+    margin-right: 8px;
+    color: #7b5e34;
+}
+
+/* Divider between universities (for the older structure) */
+.divider {
+    width: 2px;
+    height: 100%;
+    background-color: #3e2c1e;
+}
+
+/* Container holding both university cards */
+.comparison-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Reduced gap */
+    padding: 60px 80px 60px 80px; /* Reduced padding */
+    position: relative;
+    font-size: 16px; /* Slightly reduced font size */
+}
+
+/* Vertical divider between universities */
+.comparison-container::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: 50%;
+    width: 2px; /* Keeping the original divider width */
+    background-color: #8B5E3C; /* Brown theme */
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Individual university box */
+.university {
+    background-color: #fffdf8;
+    padding: 20px; /* Reduced padding */
+    border-radius: 8px; /* Reduced border-radius for smaller edges */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 48%;
+    position: relative;
+    z-index: 2;
+    display: flex; /* Enable flexbox for vertical centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within elements */
+}
+
+/* University name heading */
+.university h2 {
+    color: #5c3d24;
+    font-size: 24px; /* Slightly reduced */
+    margin-bottom: 10px; /* Reduced margin */
+    text-align: center; /* Ensure heading is centered */
+}
+
+/* Ratings list */
+.university ul {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Ensure list takes full width for centering */
+}
+
+.university li {
+    margin-bottom: 8px; /* Slightly reduced margin */
+    font-size: 16px; /* Slightly reduced */
+    display: flex;
+    align-items: center; /* Vertically align icon and text */
+    justify-content: center; /* Horizontally center content within the list item */
+}
+
+.university li i {
+    margin-right: 8px;
+    color: #7b5e34;
+}
+
+.university .location,
+.university .overall-score,
+.university .label {
+    width: 100%; /* Ensure these span the full width for proper centering */
+    margin-bottom: 8px; /* Adjust spacing */
+}
+
+.university .overall-score {
+    font-size: 30px; /* Slightly reduced */
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.university .label {
+    font-size: 12px; /* Slightly reduced */
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+
+
+
+.categories-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.categories-columns ul {
+    list-style: none;
+    padding: 0;
+    font-size: 17px;
+    width: 48%;
+}
+
+.categories-columns li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: #3e2c1e;
+}
+
+.categories-columns i {
+    margin-right: 8px;
+    color: #7b5e34;
+}
+
+
+.suggestions {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}

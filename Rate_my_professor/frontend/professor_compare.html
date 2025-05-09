@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Professors</title>
+    <link rel="stylesheet" href="professor_compare.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="search-bar-container">
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Search for Professor"
+          id="professorSearchInput"
+          autocomplete="off"
+        />
+        <div id="suggestionsContainer" class="suggestions-container"></div>
+      </div>
+    </header>
+
+    <section class="comparison-section">
+      <div class="professor-box">
+        <h2>Loading...</h2>
+        <p class="dept"></p>
+        <div class="rating-stars">
+          <strong></strong>
+          <span class="stars"></span>
+        </div>
+
+        <p class="subheading">Rating distribution:</p>
+        <div class="rating-chart">
+          <div class="bar-label">Excellent 5</div>
+          <div class="bar bar5"></div>
+          <div class="bar-label">Great 4</div>
+          <div class="bar bar4"></div>
+          <div class="bar-label">Good 3</div>
+          <div class="bar bar3"></div>
+          <div class="bar-label">Okay 2</div>
+          <div class="bar bar2"></div>
+          <div class="bar-label">Bad 1</div>
+          <div class="bar bar1"></div>
+        </div>
+
+        <div class="metrics">
+          <div class="metric">
+            <strong></strong><br /><span>would take again</span>
+          </div>
+          <div class="metric">
+            <strong></strong><br /><span>difficulty</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="professor-box">
+        <h2>Search for a Professor</h2>
+        <p class="dept"></p>
+        <div class="rating-stars">
+          <strong></strong>
+          <span class="stars"></span>
+        </div>
+
+        <p class="subheading">Rating distribution:</p>
+        <div class="rating-chart">
+          <div class="bar-label">Excellent 5</div>
+          <div class="bar bar5"></div>
+          <div class="bar-label">Great 4</div>
+          <div class="bar bar4"></div>
+          <div class="bar-label">Good 3</div>
+          <div class="bar bar3"></div>
+          <div class="bar-label">Okay 2</div>
+          <div class="bar bar2"></div>
+          <div class="bar-label">Bad 1</div>
+          <div class="bar bar1"></div>
+        </div>
+
+        <div class="metrics">
+          <div class="metric">
+            <strong></strong><br /><span>would take again</span>
+          </div>
+          <div class="metric">
+            <strong></strong><br /><span>difficulty</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="professor_compare.js"></script>
+  </body>
+</html>

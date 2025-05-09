@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      <span id="university-name-title">University Name</span> | RateMyUni
+    </title>
+    <link rel="stylesheet" href="university.css" />
+    <script src="university.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo"><b></b></div>
+    </div>
+
+    <div class="university-container">
+      <div class="left-column">
+        <h2 id="university-name">University Name</h2>
+        <p class="location" id="university-location">Location</p>
+        <div class="action-buttons">
+          <button>Rate</button>
+          <button onclick="goToCompare()">Compare</button>
+        </div>
+        <div class="overall-container">
+          <div class="overall-score" id="overall-rating">4.0</div>
+          <p class="label">Overall Quality</p>
+        </div>
+
+        <div class="category-grid">
+          <ul class="categories" id="categories-1"></ul>
+          <ul class="categories" id="categories-2"></ul>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="right-column">
+        <h3><span id="rating-count">0</span> Ratings</h3>
+        <div id="reviews-container"></div>
+      </div>
+    </div>
+    <div id="rate-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" onclick="closeRateModal()">&times;</span>
+        <h2>Rate This University</h2>
+        <form id="rate-form">
+          <label for="student-name">Your Name:</label>
+          <input type="text" id="student-name" required />
+
+          <label for="review-text">Review:</label>
+          <textarea id="review-text" rows="4" required></textarea>
+
+          <label for="rating">Overall Rating (1-5):</label>
+          <input
+            type="number"
+            id="rating"
+            min="1"
+            max="5"
+            step="0.1"
+            required
+          />
+
+          <label for="location">Location (1-5):</label>
+          <input
+            type="number"
+            id="location"
+            min="1"
+            max="5"
+            step="0.1"
+            required
+          />
+
+          <label for="reputation">Reputation (1-5):</label>
+          <input
+            type="number"
+            id="reputation"
+            min="1"
+            max="5"
+            step="0.1"
+            required
+          />
+
+          <label for="opportunity">Opportunity (1-5):</label>
+          <input
+            type="number"
+            id="opportunity"
+            min="1"
+            max="5"
+            step="0.1"
+            required
+          />
+
+          <label for="happiness">Happiness (1-5):</label>
+          <input
+            type="number"
+            id="happiness"
+            min="1"
+            max="5"
+            step="0.1"
+            required
+          />
+
+          <label for="internet">Internet (1-5):</label>
+          <input
+            type="number"
+            id="internet"
+            min="1"
+            max="5"
+            step="0.1"
+            required
+          />
+
+          <label for="faculty">Faculty (1-5):</label>
+          <input
+            type="number"
+            id="faculty"
+            min="1"
+            max="5"
+            step="0.1"
+            required
+          />
+
+          <label for="clubs">Clubs (1-5):</label>
+          <input type="number" id="clubs" min="1" max="5" step="0.1" required />
+
+          <label for="social">Social (1-5):</label>
+          <input
+            type="number"
+            id="social"
+            min="1"
+            max="5"
+            step="0.1"
+            required
+          />
+
+          <label for="food">Food (1-5):</label>
+          <input type="number" id="food" min="1" max="5" step="0.1" required />
+
+          <label for="safety">Safety (1-5):</label>
+          <input
+            type="number"
+            id="safety"
+            min="1"
+            max="5"
+            step="0.1"
+            required
+          />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

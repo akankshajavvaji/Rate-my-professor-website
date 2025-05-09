@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professor Profile</title>
+    <link rel="stylesheet" href="professor.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"></div>
+    </header>
+
+    <main class="professor-page">
+      <section class="left-section">
+        <h1 id="professorName">Loading...</h1>
+        <h3>
+          <a href="#" id="deptLink" class="dept-link">Department</a> |
+          <a href="#" id="universityLink" class="university-link">University</a>
+        </h3>
+
+        <div class="rating-stars">
+          <span id="numericRating">Loading...</span>
+          <span class="stars" id="starRating">★☆☆☆☆</span>
+        </div>
+
+        <div class="actions">
+          <button id="rateBtn" class="rate-btn">Rate</button>
+          <a id="compareLink" class="compare-btn" href="#">Compare</a>
+        </div>
+
+        <div class="rating-distribution">
+          <h4>Rating distribution:</h4>
+          <div id="distributionContainer"></div>
+        </div>
+      </section>
+
+      <section class="right-section">
+        <div class="summary">
+          <div class="stat">
+            <strong id="wouldTakeAgain">--%</strong
+            ><span>would take again</span>
+          </div>
+          <div class="stat">
+            <strong id="difficulty">--</strong><span>difficulty</span>
+          </div>
+        </div>
+
+        <div class="review-header">
+          <h4 id="reviewCount">Loading Reviews...</h4>
+          <select aria-label="Choose an option">
+            <option>All Courses</option>
+          </select>
+        </div>
+
+        <div class="reviews" id="reviewsContainer">
+          <!-- JS inserts reviews here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Rate Modal -->
+    <div id="rateModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" id="closeRateModal">&times;</span>
+        <h2>Rate This Professor</h2>
+        <form id="rateForm">
+          <label>Rating (1-5):</label>
+          <input type="number" name="rating" min="1" max="5" required />
+
+          <label>Would Take Again (%):</label>
+          <input
+            type="number"
+            name="would_take_again"
+            min="0"
+            max="100"
+            required
+          />
+
+          <label>Difficulty (1-5):</label>
+          <input type="number" name="difficulty" min="1" max="5" required />
+
+          <label>Quality (1-5):</label>
+          <input type="number" name="quality" min="1" max="5" required />
+
+          <label>For Credits:</label>
+          <select name="for_credits">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+
+          <label>Attendance:</label>
+          <select name="attendance">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+
+          <label>Course Code:</label>
+          <input type="text" name="course_code" required />
+
+          <label>Review:</label>
+          <textarea name="review" rows="4" required></textarea>
+
+          <button type="submit">Submit Review</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="professor.js"></script>
+  </body>
+</html>

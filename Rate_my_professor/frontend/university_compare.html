@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Universities</title>
+    <link rel="stylesheet" href="university_compare.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="search-bar-container">
+        <input
+          type="text"
+          placeholder="Search for University"
+          class="search-bar"
+          id="universitySearch"
+          name="universitySearch"
+        />
+        <ul id="suggestions" class="suggestions"></ul>
+      </div>
+    </header>
+
+    <main class="comparison-container">
+      <div class="university left-panel">
+        <h2>Mahindra University</h2>
+        <p class="location">Bahadurpally | Hyderabad</p>
+        <div class="overall-score">4.0</div>
+        <p class="label">Overall Quality</p>
+
+        <div class="categories-columns">
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <strong>Location:</strong> 4.0
+            </li>
+            <li>
+              <i class="fas fa-star"></i> <strong>Reputation:</strong> 4.2
+            </li>
+            <li>
+              <i class="fas fa-bullseye"></i> <strong>Opportunity:</strong> 3.8
+            </li>
+            <li>
+              <i class="fas fa-smile"></i> <strong>Happiness:</strong> 4.5
+            </li>
+            <li><i class="fas fa-wifi"></i> <strong>Internet:</strong> 4.5</li>
+            <li>
+              <i class="fas fa-school"></i> <strong>Facility:</strong> 4.7
+            </li>
+            <li><i class="fas fa-users"></i> <strong>Clubs:</strong> 3.5</li>
+            <li>
+              <i class="fas fa-glass-cheers"></i> <strong>Social:</strong> 4.1
+            </li>
+            <li><i class="fas fa-hamburger"></i> <strong>Food:</strong> 4.5</li>
+            <li>
+              <i class="fas fa-shield-alt"></i> <strong>Safety:</strong> 4.8
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="university right-panel">
+        <h2>Loading...</h2>
+        <p class="location">...</p>
+        <div class="overall-score">...</div>
+        <p class="label">Overall Quality</p>
+
+        <div class="categories-columns">
+          <ul></ul>
+        </div>
+      </div>
+    </main>
+
+    <script src="university_compare.js"></script>
+  </body>
+</html>

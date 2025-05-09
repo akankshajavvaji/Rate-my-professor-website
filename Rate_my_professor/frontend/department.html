@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department - Professors</title>
+    <link rel="stylesheet" href="department.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"></div>
+      <input
+        class="search-bar"
+        type="text"
+        placeholder="Search for Professor"
+      />
+    </header>
+
+    <div class="department-header">
+      <p>
+        12 professors in
+        <a href="#" class="dept-link">Mathematics Department</a> at Mahindra
+        University
+      </p>
+
+      <div class="department-select-container">
+        <h2>Department</h2>
+        <select aria-label="Choose an option">
+          <option>Mathematics</option>
+          <option>Computer Science</option>
+          <option>Physics</option>
+          <option>Chemistry</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="professor-list" id="professor-list">
+      <!-- Professor cards will be inserted here via JS -->
+    </div>
+
+    <script src="department.js"></script>
+  </body>
+</html>
