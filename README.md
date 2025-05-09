@@ -1,1 +1,0 @@
-# Rate-my-professor-website
